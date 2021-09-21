@@ -206,7 +206,8 @@ img {
     left: 40vw;
     text-align: center;
 }
-  }
-  #nextbutton:active {
+
+
+#nextbutton:active {
     background-color: rgb(0, 183, 255)
-  }
+}
