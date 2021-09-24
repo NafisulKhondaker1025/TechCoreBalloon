@@ -15,18 +15,18 @@ AFRAME.registerComponent('populate-sidebar', {
         sidebar.appendChild(closebtn);
         const capturebtn = document.createElement('a');
         capturebtn.setAttribute('href', 'javascript:void(0)');
-        capturebtn.innerHTML = '<img id="cameraimg" src="https://techcoreassets.blob.core.windows.net/images/camera.png">';
+        capturebtn.innerHTML = '<img id="cameraimg" src="assets/camera.png">';
         capturebtn.onclick = this.openCapture;
         capturebtn.className = 'capturebtn';
         sidebar.appendChild(capturebtn);
 
         const uploadbtn = document.getElementById('uploadBtn');
-        uploadbtn.innerHTML = '<img id="helpimg" src="https://techcoreassets.blob.core.windows.net/images/uploadFile.png">';
+        uploadbtn.innerHTML = '<img id="helpimg" src="assets/uploadFile.png">';
         uploadbtn.onclick = this.upload;
 
         const helpbtn = document.createElement('a');
         helpbtn.setAttribute('href', 'javascript:void(0)');
-        helpbtn.innerHTML = '<img id="helpimg" src="https://techcoreassets.blob.core.windows.net/images/help.png">';
+        helpbtn.innerHTML = '<img id="helpimg" src="assets/help.png">';
         helpbtn.onclick = this.openHelp;
         helpbtn.id = 'help';
         sidebar.appendChild(helpbtn);
