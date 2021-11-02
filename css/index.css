@@ -104,7 +104,8 @@ img {
 
 #sound {
     text-decoration: none;
-    top: 110%;
+    top: 65%;
+    display: block;
     margin-left: 0% !important;
     font-size: 1.0em;
     font-weight: 1000;
