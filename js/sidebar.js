@@ -31,6 +31,12 @@ AFRAME.registerComponent('populate-sidebar', {
         helpbtn.id = 'help';
         sidebar.appendChild(helpbtn);
 
+        const soundbtn = document.createElement('a');
+        soundbtn.setAttribute('href', 'javascript:void(0)');
+        soundbtn.innerHTML = 'Sound';
+        soundbtn.onclick = this.playSound;
+        soundbtn.id = 'sound';
+
         const cameraHelp = document.createElement('span');
         cameraHelp.id = 'camHelp'
         cameraHelp.innerHTML = '❮❮❮❮ Click to take photo/video';
@@ -85,6 +91,16 @@ AFRAME.registerComponent('populate-sidebar', {
     openHelp: function () {
         camHelp.style.display = 'block';
         fileHelp.style.display = 'block';
+    },
+
+    playSound: function () {
+        let video = document.getElementById('vid-cat');
+        if (video.muted == false) {
+            video.muted = true;
+        }
+        else {
+            video.muted = false;
+        }
     },
 
     done: function () {

@@ -102,6 +102,22 @@ img {
     padding-bottom: 9.375%;
 }
 
+#sound {
+    text-decoration: none;
+    top: 110%;
+    margin-left: 0% !important;
+    font-size: 1.0em;
+    font-weight: 1000;
+    cursor: pointer;
+    color: white;
+    padding: 0.3em 0.7em 0.3em 0.7em;
+    border: solid white 0.1em;
+    min-width: 50%;
+    max-width: 50%;
+    border-radius: 1.5em;
+    text-align: center;
+}
+
 #imgvid {
     bottom: 74%;
     left: 0%;
