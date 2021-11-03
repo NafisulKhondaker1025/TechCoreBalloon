@@ -7,7 +7,6 @@ AFRAME.registerComponent('populate-sidebar', {
             const {os, osVersion, browser} = XR8.XrDevice.deviceEstimate();
             const errorText = '';
             if (os === 'iOS') {
-              break;
             } 
             else {
                 const download = document.getElementById('downloadButton');
