@@ -3,8 +3,17 @@ AFRAME.registerComponent('populate-sidebar', {
         const sidebar = document.getElementById('sidebar');
         const main = document.getElementById('main');
 
-        const download = document.getElementById('downloadButton');
-        download.innerHTML = 'Download';
+
+        const iOS15Check = () => {
+            const {os, osVersion, browser} = XR8.XrDevice.deviceEstimate();
+            const errorText = '';
+            if (os === 'iOS') {
+              break;
+            } else {
+                const download = document.getElementById('downloadButton');
+                download.innerHTML = 'Download';
+            }
+          }
 
         const closebtn = document.createElement('a');
         closebtn.innerHTML = "x";
