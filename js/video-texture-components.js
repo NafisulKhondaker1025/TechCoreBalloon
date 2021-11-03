@@ -27,9 +27,9 @@
         if (os === 'iOS') {
           switch (osVersion) {
             case '15.0':
-            case '15.0.1':
-            case '15.0.2':
-            case '15.1':
+            // case '15.0.1':
+            // case '15.0.2':
+            // case '15.1':
               // Video texture upload not available in iOS 15
               break
             default:
