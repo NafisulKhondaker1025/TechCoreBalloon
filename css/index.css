@@ -103,8 +103,8 @@ img {
 }
 
 #sound {
-    bottom: 4vh;
-    right: 5vw;
+    bottom: 6vh;
+    right: 44.5vw;
     text-decoration: none;
     display: block;
     cursor: pointer;
@@ -219,7 +219,7 @@ img {
     width: 15%;
     height: auto;
     position: absolute;
-    bottom: 6vh;
+    bottom: 4vh;
     left: 42.5vw;
     text-align: center;
 }

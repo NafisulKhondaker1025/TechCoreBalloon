@@ -92,7 +92,7 @@ AFRAME.registerComponent('populate-sidebar', {
         done.style.display = "block";
         camHelp.style.display = "none";
         fileHelp.style.display = 'none';
-        document.getElementById('nextbutton').style.display = "none";
+        //document.getElementById('nextbutton').style.display = "none";
     },
 
     upload: function () {
@@ -122,7 +122,7 @@ AFRAME.registerComponent('populate-sidebar', {
         imgvid.style.display = "none";
         textcont.style.display = "none";
         document.getElementById('recorder').style.display = "none";
-        document.getElementById('nextbutton').style.display = "block";
+        // document.getElementById('nextbutton').style.display = "block";
     },
 
     closeBar: function () {
