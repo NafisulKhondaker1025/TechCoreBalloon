@@ -108,11 +108,11 @@ AFRAME.registerComponent('populate-sidebar', {
         let video = document.getElementById('vid-cat');
         if (video.muted == false) {
             video.muted = true;
-            soundbtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            sound.innerHTML = '<i class="fas fa-volume-mute"></i>';
         }
         else {
             video.muted = false;
-            soundbtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+            sound.innerHTML = '<i class="fas fa-volume-up"></i>';
         }
     },
 
