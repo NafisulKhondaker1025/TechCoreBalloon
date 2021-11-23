@@ -3,7 +3,7 @@ AFRAME.registerComponent('next-button', {
       console.log("made it half way")
       const model = document.getElementById('tvModel')
       const nextButton = document.getElementById('nextbutton')
-      nextButton.style.display = 'block'
+      //nextButton.style.display = 'block'
       let idx = 2  // Start with the 2nd animation because the model starts with idle animation
       const nextAnimation = () => {
         if (idx % 2 == 0) {
