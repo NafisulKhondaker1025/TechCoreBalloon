@@ -8,14 +8,14 @@ AFRAME.registerComponent('next-button', {
       const nextAnimation = () => {
         if (idx % 2 == 0) {
             model.setAttribute('animation-mixer', {
-                clip: 'Test2',
+                clip: '*',
                 loop: 'repeat',
                 crossFadeDuration: 0.4,
             })
         }
         else {
             model.setAttribute('animation-mixer', {
-                clip: '*',
+                clip: 'Test2',
                 loop: 'repeat',
                 crossFadeDuration: 0.4,
             })
