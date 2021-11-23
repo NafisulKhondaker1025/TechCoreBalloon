@@ -46,7 +46,7 @@ AFRAME.registerComponent('populate-sidebar', {
         soundbtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
         soundbtn.onclick = this.playSound;
         soundbtn.id = 'sound';
-        sidebar.appendChild(soundbtn);
+        main.appendChild(soundbtn);
 
         const cameraHelp = document.createElement('span');
         cameraHelp.id = 'camHelp'
