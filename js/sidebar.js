@@ -43,7 +43,7 @@ AFRAME.registerComponent('populate-sidebar', {
 
         const soundbtn = document.createElement('a');
         soundbtn.setAttribute('href', 'javascript:void(0)');
-        soundbtn.innerHTML = 'Sound';
+        soundbtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
         soundbtn.onclick = this.playSound;
         soundbtn.id = 'sound';
         sidebar.appendChild(soundbtn);
@@ -108,9 +108,11 @@ AFRAME.registerComponent('populate-sidebar', {
         let video = document.getElementById('vid-cat');
         if (video.muted == false) {
             video.muted = true;
+            soundbtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
         }
         else {
             video.muted = false;
+            soundbtn.innerHTML = '<i class="fas fa-volume-up"></i>';
         }
     },
 
