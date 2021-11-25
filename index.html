@@ -22,12 +22,11 @@
     <script async src="//apps.8thwall.com/xrweb?appKey=c3xu97LXoJrlZ46itZ8K9Ap67glv5RTyldmcZyzmwE0I7OZEF59DN8qickXCHkHbwFdAPD"></script>
     
     <!--Custom JS-->
-    <!-- <script src="./js/TechZeppelin.js"></script> -->
     <script src="./js/sidebar.js"></script>
     <script src="./js/video-texture-components.js"></script>
     <script src="./js/cubeMapRealtime.js"></script>
     <script src="./js/xr-light.js"></script>
-    <script src="./js/changeAnimation.js"></script>
+    <!-- <script src="./js/changeAnimation.js"></script> -->
 
 
 </head>
@@ -45,15 +44,15 @@
     </div>
 
     <input id="file" type="file" name="filename" accept="video/*">
-    <a-scene next-button
-             xrextras-almost-there
+    <a-scene xrextras-almost-there
              xrextras-loading
              xrextras-runtime-error
              renderer="colorManagement: true"
              xrweb
              populate-sidebar>
         <a-assets>
-            <a-asset-item id="tv" src="https://techcoreassets.blob.core.windows.net/3dfiles/TCBalloon.glb"></a-asset-item>
+            <!-- <a-asset-item id="tv" src="https://techcoreassets.blob.core.windows.net/3dfiles/TCBalloon.glb"></a-asset-item> -->
+        </a-asset-item id="tv" src="../assets/santatest.glb"></a-asset-item>
             <video id="vid-cat" muted autoplay playsinline loop="true" crossorigin="anonymous"
                    src="https://techcoreassets.blob.core.windows.net/images/TechZeppelinVideo.mp4">
             </video>
@@ -102,7 +101,7 @@
                   rotation="0 -55 0"
                   scale="2 2 2"
                   cubemap-realtime
-                  animation-mixer="clip: Test2; loop: repeat"></a-entity>
+                  animation-mixer="clip: *; loop: repeat"></a-entity>
 
         <a-plane id="ground"
                  rotation="-90 0 0"
