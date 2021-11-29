@@ -19,11 +19,6 @@
         screen.material.map.needsUpdate = true;
       }
 
-      this.el.getObject3D.traverse( function( object ) {
-        object.frustumCulled = false;
-      });
-
-
       this.el.addEventListener(
         'model-loaded', () => applyVideoMaterial(this.el.getObject3D('mesh'))
       );
