@@ -52,7 +52,6 @@
           video.src = e.target.result;
           const vidTex = new THREE.VideoTexture(video);
           applyVideoMaterial(this.el.getObject3D('mesh'));
-          video.muted = false;
           video.play();
         }
         reader.readAsDataURL(file);
