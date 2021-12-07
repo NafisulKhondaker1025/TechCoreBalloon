@@ -103,20 +103,22 @@ img {
 }
 
 #sound {
+    
     bottom: 6vh;
-    right: 44.5vw;
+    right: 3.5vw;
     text-decoration: none;
     display: block;
     cursor: pointer;
     color: white;
-    padding: 0.3em 0.7em 0.3em 0.7em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    font-size: 1.5em;
     border: solid white 0.1em;
     border-radius: 0.5em;
-    text-align: center;
     width: auto;
     height: auto;
     position: absolute;
     text-align: center;
+
 }
 
 #imgvid {
@@ -222,7 +224,7 @@ img {
     display: block;
     cursor: pointer;
     color: white;
-    padding: 0.3em 0.7em 0.3em 0.7em;
+    padding: 0.6em 0.7em 0.6em 0.7em;
     border: solid white 0.1em;
     border-radius: 0.5em;
     text-align: center;
@@ -233,6 +235,6 @@ img {
 }
 
 
-#nextbutton:active {
+#nextbutton:active #sound:active {
     background-color: rgb(0, 183, 255)
 }

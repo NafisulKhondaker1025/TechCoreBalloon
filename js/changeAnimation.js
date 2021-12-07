@@ -4,8 +4,8 @@ AFRAME.registerComponent('next-button', {
       const model1 = document.getElementById('tvModel1');
 
 
-      const nextButton = document.getElementById('nextbutton')
-      nextButton.style.display = 'block'
+      const nextButton = document.getElementById('nextbutton');
+      nextButton.style.display = 'block';
 
       const nextAnimation = () => {
         console.log('half way');
