@@ -1,15 +1,15 @@
 AFRAME.registerComponent('next-button', {
     init() {
-      const model = document.getElementById('tvmodel');
-      const model1 = document.getElementById('tvmodel1');
+      const model = document.getElementById('tvModel');
+      const model1 = document.getElementById('tvModel1');
 
 
       const nextButton = document.getElementById('nextbutton')
       nextButton.style.display = 'block'
-      // Start with the 2nd animation because the model starts with idle animation
+
       const nextAnimation = () => {
         console.log('half way');
-        if (model.getAttribute('visible') == 'true') {
+        if (model.getAttribute('visible') == true) {
           console.log('all the way');
           nextButton.innerHTML = 'Make Santa Fly';
           model.setAttribute('visible', 'false');
