@@ -216,11 +216,19 @@ img {
 }
 
 #nextbutton {
-    width: 15%;
+    bottom: 6vh;
+    right: 44.5vw;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    color: white;
+    padding: 0.3em 0.7em 0.3em 0.7em;
+    border: solid white 0.1em;
+    border-radius: 0.5em;
+    text-align: center;
+    width: auto;
     height: auto;
     position: absolute;
-    bottom: 4vh;
-    left: 42.5vw;
     text-align: center;
 }
 
