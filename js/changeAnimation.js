@@ -8,15 +8,13 @@ AFRAME.registerComponent('next-button', {
       nextButton.style.display = 'block';
 
       const nextAnimation = () => {
-        console.log('half way');
         if (model.getAttribute('visible') == true) {
-          console.log('all the way');
-          nextButton.innerHTML = 'Make Santa Fly';
+          nextButton.innerHTML = 'Make Santa Come Back';
           model.setAttribute('visible', 'false');
           model1.setAttribute('visible', 'true');
         }
         else {
-          nextButton.innerHTML = 'Make Santa Come Back';
+          nextButton.innerHTML = 'Make Santa Fly';
           model.setAttribute('visible', 'true');
           model1.setAttribute('visible', 'false');
         }
