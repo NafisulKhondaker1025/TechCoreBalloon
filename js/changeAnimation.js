@@ -1,26 +1,24 @@
 AFRAME.registerComponent('next-button', {
     init() {
-      console.log("made it half way")
-      const model = document.getElementById('tvModel')
+      const model = document.getElementById('tvmodel');
+      const model1 = document.getElementById('tvmodel1');
+
+
       const nextButton = document.getElementById('nextbutton')
       //nextButton.style.display = 'block'
-      let idx = 2  // Start with the 2nd animation because the model starts with idle animation
+      // Start with the 2nd animation because the model starts with idle animation
       const nextAnimation = () => {
-        if (idx % 2 == 0) {
-            model.setAttribute('animation-mixer', {
-                clip: '*',
-                loop: 'repeat',
-                crossFadeDuration: 0.4,
-            })
+        
+        if (model.getAttribute('visible') == 'true') {
+          nextButton.innerHTML = 'Make Santa Fly';
+          model.setAttribute('visible', 'false');
+          model1.setAttribute('visible', 'true');
         }
         else {
-            model.setAttribute('animation-mixer', {
-                clip: 'Test2',
-                loop: 'repeat',
-                crossFadeDuration: 0.4,
-            })
+          nextButton.innerHTML = 'Make Santa Come Back';
+          model.setAttribute('visible', 'true');
+          model1.setAttribute('visible', 'false');
         }
-        idx = (idx + 1)
       }
       nextButton.onclick = nextAnimation  // Switch to the next animation when the button is pressed.
     },
