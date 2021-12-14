@@ -7,8 +7,8 @@
       const uploadBtn = document.getElementById('uploadBtn');
       const video = document.querySelector(this.data.video);
       //video.muted = false;
-      const texture = new THREE.VideoTexture(video);
       video.play();
+      const texture = new THREE.VideoTexture(video);
       const applyVideoMaterial = (mesh) => {
         if (!mesh) {
           return;
