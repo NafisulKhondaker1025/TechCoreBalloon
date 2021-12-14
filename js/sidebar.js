@@ -1,7 +1,22 @@
 AFRAME.registerComponent('populate-sidebar', {
     init: function () {
+        var cameraOpen = false;
         const sidebar = document.getElementById('sidebar');
         const main = document.getElementById('main');
+
+        const recorder = document.createElement('xrextras-capture-button');
+        recorder.setAttribute('capture-mode', 'standard');
+
+        const record = document.createElement('xrextras-capture-config');
+        record.setAttribute('max-duration-ms', '120000');
+        record.setAttribute('max-dimension', '1280');
+        record.setAttribute('enable-end-card', 'false');
+        record.setAttribute('file-name-prefix', 'techcore-ar-');
+
+        const recordPrev = document.createElement('xrextras-capture-preview');
+        recordPrev.setAttribute('action-button-share-text', '120000');
+        recordPrev.setAttribute('action-button-view-text', '1280');
+        recordPrev.setAttribute('finalize-text', 'false');
 
         // const iOS15Check = () => {
         //     const {os, osVersion, browser} = XR8.XrDevice.deviceEstimate();
@@ -84,6 +99,24 @@ AFRAME.registerComponent('populate-sidebar', {
 
     openCapture: function () {
         //document.getElementById('recorder').style.display = "block";
+        cameraOpen = true;
+        this.el.sceneEl.appendChild(recorder);
+        this.el.sceneEl.appendChild(record);
+        this.el.sceneEl.appendChild(recordPrev);
+
+        const iOS15Check = () => {
+            const {os, osVersion, browser} = XR8.XrDevice.deviceEstimate();
+            const errorText = '';
+            if (os === 'iOS') {
+            } 
+            else {
+                const download = document.getElementById('downloadButton');
+                download.innerHTML = 'Download';
+            }
+        }
+
+        window.XR8 ? iOS15Check() : window.addEventListener('xrloaded', iOS15Check);
+
         textcont.style.display = "block";
         imgvid.style.display = "block";
         sidebar.style.width = "0";
@@ -117,6 +150,12 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     done: function () {
+        if (cameraOpen == true) {
+            this.el.sceneEl.removeChild(recorder);
+            this.el.sceneEl.removeChild(record);
+            this.el.sceneEl.removeChild(recordPrev);
+        }
+
         done.style.display = "none";
         openb.style.display = "block";
         imgvid.style.display = "none";
