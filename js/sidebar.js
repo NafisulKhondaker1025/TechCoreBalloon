@@ -83,7 +83,7 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     openCapture: function () {
-        document.getElementById('recorder').style.display = "block";
+        //document.getElementById('recorder').style.display = "block";
         textcont.style.display = "block";
         imgvid.style.display = "block";
         sidebar.style.width = "0";
@@ -122,7 +122,7 @@ AFRAME.registerComponent('populate-sidebar', {
         openb.style.display = "block";
         imgvid.style.display = "none";
         textcont.style.display = "none";
-        document.getElementById('recorder').style.display = "none";
+        //document.getElementById('recorder').style.display = "none";
         document.getElementById('nextbutton').style.display = "block";
     },
 
