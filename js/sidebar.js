@@ -4,32 +4,32 @@ AFRAME.registerComponent('populate-sidebar', {
         const sidebar = document.getElementById('sidebar');
         const main = document.getElementById('main');
 
-        const recorder = document.createElement('xrextras-capture-button');
-        recorder.setAttribute('capture-mode', 'standard');
+        // const recorder = document.createElement('xrextras-capture-button');
+        // recorder.setAttribute('capture-mode', 'standard');
 
-        const record = document.createElement('xrextras-capture-config');
-        record.setAttribute('max-duration-ms', '120000');
-        record.setAttribute('max-dimension', '1280');
-        record.setAttribute('enable-end-card', 'false');
-        record.setAttribute('file-name-prefix', 'techcore-ar-');
+        // const record = document.createElement('xrextras-capture-config');
+        // record.setAttribute('max-duration-ms', '120000');
+        // record.setAttribute('max-dimension', '1280');
+        // record.setAttribute('enable-end-card', 'false');
+        // record.setAttribute('file-name-prefix', 'techcore-ar-');
 
-        const recordPrev = document.createElement('xrextras-capture-preview');
-        recordPrev.setAttribute('action-button-share-text', '120000');
-        recordPrev.setAttribute('action-button-view-text', '1280');
-        recordPrev.setAttribute('finalize-text', 'false');
+        // const recordPrev = document.createElement('xrextras-capture-preview');
+        // recordPrev.setAttribute('action-button-share-text', '120000');
+        // recordPrev.setAttribute('action-button-view-text', '1280');
+        // recordPrev.setAttribute('finalize-text', 'false');
 
-        // const iOS15Check = () => {
-        //     const {os, osVersion, browser} = XR8.XrDevice.deviceEstimate();
-        //     const errorText = '';
-        //     if (os === 'iOS') {
-        //     } 
-        //     else {
-        //         const download = document.getElementById('downloadButton');
-        //         download.innerHTML = 'Download';
-        //     }
-        // }
+        const iOS15Check = () => {
+            const {os, osVersion, browser} = XR8.XrDevice.deviceEstimate();
+            const errorText = '';
+            if (os === 'iOS') {
+            } 
+            else {
+                const download = document.getElementById('downloadButton');
+                download.innerHTML = 'Download';
+            }
+        }
 
-        // window.XR8 ? iOS15Check() : window.addEventListener('xrloaded', iOS15Check);
+        window.XR8 ? iOS15Check() : window.addEventListener('xrloaded', iOS15Check);
 
         const closebtn = document.createElement('a');
         closebtn.innerHTML = "x";
@@ -98,24 +98,25 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     openCapture: function () {
-        //document.getElementById('recorder').style.display = "block";
+        document.getElementById('recorder').style.display = "block";
+        document.getElementsByTagName('xrextras-capture-button').setAttribute('capture-mode', 'standard');
         cameraOpen = true;
-        document.getElementsByTagName('a-scene').appendChild(recorder);
-        document.getElementsByTagName('a-scene').appendChild(record);
-        document.getElementsByTagName('a-scene').appendChild(recordPrev);
+        // document.getElementsByTagName('a-scene').appendChild(recorder);
+        // document.getElementsByTagName('a-scene').appendChild(record);
+        // document.getElementsByTagName('a-scene').appendChild(recordPrev);
 
-        const iOS15Check = () => {
-            const {os, osVersion, browser} = XR8.XrDevice.deviceEstimate();
-            const errorText = '';
-            if (os === 'iOS') {
-            } 
-            else {
-                const download = document.getElementById('downloadButton');
-                download.innerHTML = 'Download';
-            }
-        }
+        // const iOS15Check = () => {
+        //     const {os, osVersion, browser} = XR8.XrDevice.deviceEstimate();
+        //     const errorText = '';
+        //     if (os === 'iOS') {
+        //     } 
+        //     else {
+        //         const download = document.getElementById('downloadButton');
+        //         download.innerHTML = 'Download';
+        //     }
+        // }
 
-        window.XR8 ? iOS15Check() : window.addEventListener('xrloaded', iOS15Check);
+        // window.XR8 ? iOS15Check() : window.addEventListener('xrloaded', iOS15Check);
 
         textcont.style.display = "block";
         imgvid.style.display = "block";
@@ -151,9 +152,8 @@ AFRAME.registerComponent('populate-sidebar', {
 
     done: function () {
         if (cameraOpen == true) {
-            document.getElementsByTagName('a-scene').removeChild(recorder);
-            document.getElementsByTagName('a-scene').removeChild(record);
-            document.getElementsByTagName('a-scene').removeChild(recordPrev);
+            document.getElementsByTagName('xrextras-capture-button').setAttribute('capture-mode', 'photo');
+            cameraOpen = false;
         }
 
         done.style.display = "none";
