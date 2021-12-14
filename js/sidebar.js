@@ -111,6 +111,7 @@ AFRAME.registerComponent('populate-sidebar', {
             sound.innerHTML = '<i class="fas fa-volume-mute"></i>';
         }
         else {
+            video.volume = 1.0;
             video.muted = false;
             sound.innerHTML = '<i class="fas fa-volume-up"></i>';
         }
