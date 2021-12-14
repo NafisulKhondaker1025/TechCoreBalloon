@@ -100,9 +100,9 @@ AFRAME.registerComponent('populate-sidebar', {
     openCapture: function () {
         //document.getElementById('recorder').style.display = "block";
         cameraOpen = true;
-        this.el.sceneEl.appendChild(recorder);
-        this.el.sceneEl.appendChild(record);
-        this.el.sceneEl.appendChild(recordPrev);
+        document.getElementsByTagName('a-scene').appendChild(recorder);
+        document.getElementsByTagName('a-scene').appendChild(record);
+        document.getElementsByTagName('a-scene').appendChild(recordPrev);
 
         const iOS15Check = () => {
             const {os, osVersion, browser} = XR8.XrDevice.deviceEstimate();
@@ -151,9 +151,9 @@ AFRAME.registerComponent('populate-sidebar', {
 
     done: function () {
         if (cameraOpen == true) {
-            this.el.sceneEl.removeChild(recorder);
-            this.el.sceneEl.removeChild(record);
-            this.el.sceneEl.removeChild(recordPrev);
+            document.getElementsByTagName('a-scene').removeChild(recorder);
+            document.getElementsByTagName('a-scene').removeChild(record);
+            document.getElementsByTagName('a-scene').removeChild(recordPrev);
         }
 
         done.style.display = "none";
